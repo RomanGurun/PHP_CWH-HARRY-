@@ -1,0 +1,23 @@
+11111.what we have done in this loginsystem is that we have use a session in welcome.php and login.php
+to make a cookies and what we have done here is we have also import partials folder file that is 
+database connectivity files in a partials folder.
+
+22222.we have done a user validation by making a username unique and primary in database and
+by making a ID key in database. Hnece no need of making it unique on code.
+
+333.we have also put a validation on cpassword and real password.
+
+4444.we have connect sql and connect database with msqli_query($conn<$sql).
+
+
+55.we have make a username only one by making $numrows >0 is false and $showErrow=wrong user.
+
+666.we have alos make a $showerror variable upadted value is true when a validation successess 
+and pass in below php like a synchronous.if  $showerror is true then below div bootstrap message
+code runs and put echo as well.....
+
+
+hash is a one way funtion that make a hash password of a previous password.we save a hash password
+in a database.a password has a new hash and a new has has different hash....
+
+in php _hash() and _verify() is example of it.... 
