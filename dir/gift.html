@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift for users</title>
+<style>
+body{
+    background-color: yellow;
+
+}
+
+span{
+    color:green;
+}
+.prize{
+    color:red;
+}
+button{
+    border-radius: 8px;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.container{
+    height:500px;
+    display: flex;
+    /* border: solid 2px green; */
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+  
+<div class="container">
+<span>Gift for a users</span>
+
+<div class="prize">
+
+</div>
+
+<button class="btn">Click me</button>
+
+<div class="message"></div>
+</div>
+
+</body>
+<script>
+
+let prize=document.querySelector('.prize');
+let winprize=['Farari','Iphone 14promax','Pebbles','worldtour','No Prize','Big Apartment','pen','hammer','sickle','No Prize'];
+let button=document.querySelector('.btn');
+let message=document.querySelector('.message');
+let remainingAttempt=4;
+let start=1;
+message.innerHTML="You have got 4 attempts";
+
+
+button.addEventListener("click",function(){
+
+ if(start<=4){
+  let random=Math.floor(Math.random()*9);
+console.log(random);
+  prize.innerHTML="Congratulations you have received"+winprize[random];
+  start++;
+  remainingAttempt--;
+  if(remainingAttempt==0){
+// here async or sync function concepts is used.........
+
+    button.addEventListener("click",function(){
+
+prize.innerHTML="Blank Blank Blank!!!!!!!";
+    });
+
+    message.innerHTML="No more attempts left";
+ 
+ 
+    exit;
+
+  }
+message.innerHTML="You have now "+remainingAttempt+"attempt left";
+
+}else{
+    // message.innerHTML="No more attempts left";
+}
+
+
+
+});
+
+
+
+
+</script>
+
+
+</html>
